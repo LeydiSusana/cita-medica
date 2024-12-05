@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Programar Cita Médica</title>
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <div class="appointment-form-container">
+        <h3>Programe su Cita Médica</h3>
+        <form id="appointment-form" class="appointment-form">
+            <label for="doctor_id">
+                <i class="fas fa-user-md"></i> Doctor:
+            </label>
+            <select name="doctor_id" id="doctor_id" required>
+                <option value="">Seleccione un doctor</option>
+                <option value="1">Dr. Juan Pérez - Cardiología</option>
+                <option value="2">Dra. María López - Pediatría</option>
+                <option value="3">Dr. Carlos Gómez - Neurología</option>
+                <option value="4">Dra. Ana Sánchez - Dermatología</option>
+            </select>
+
+            <label for="appointment_time">
+                <i class="fas fa-calendar-alt"></i> Fecha y Hora:
+            </label>
+            <input type="datetime-local" name="appointment_time" id="appointment_time" required>
+
+            <button type="submit">
+                <i class="fas fa-calendar-check"></i> Reservar Cita
+            </button>
+        </form>
+        <a href="confirm_cita.html" class="logout-link">Cerrar sesión</a>
+    </div>
+</body>
+
+</html>

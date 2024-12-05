@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Manager - Login</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#4CAF50">
+    <script src="js/loading.js" defer></script>
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker
+                    .register("service-worker.js")
+                    .then((registration) => {
+                        console.log("Service Worker registrado con éxito:", registration);
+                    })
+                    .catch((error) => {
+                        console.error("Error al registrar el Service Worker:", error);
+                    });
+            });
+        }
+    </script>
+</head>
+
+<body>
+
+    <div id="splash-screen">
+        <h1>Cargando...</h1>
+        <div class="spinner"></div>
+    </div>
+    <div id="login-form" style="display: none;">
+        <form action="doctores.html" method="GET">
+            <img src="doctores.png" alt="Doctores">
+            <h2>Agenda tu cita</h2>
+            <button type="submit">Aquí</button>
+        </form>
+    </div>
+</body>
+
+</html>
